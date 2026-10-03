@@ -1,0 +1,48 @@
+---
+layout: default
+title: Cut-Up Machine
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+<div class="cutup-container">
+  <h1>Cut-Up Machine</h1>
+  <p class="intro-text">
+    "When you cut into the present the future leaks out." — William S. Burroughs
+  </p>
+
+  <div class="input-group">
+    <label for="textA">Source text A, something from a book, a poem...</label>
+    <textarea id="textA" placeholder="Write or paste in your text here..."></textarea>
+  </div>
+
+  <div class="input-group">
+    <label for="textB">Source text B, news paper article or a dream:</label>
+    <textarea id="textB" placeholder="Write or paste in your text here..."></textarea>
+  </div>
+
+  <div class="controls">
+    <select id="method" class="method-select">
+      <option value="foldin">Classic Fold-In</option>
+      <option value="quadrant">4-Quadrants cut-up</option>
+      <option value="lineInterleave">Line after line (Interleave)</option>
+      <option value="wordScramble">Word cluster / Random</option>
+    </select>
+
+    <button id="cutBtn" class="btn">Cut it up!</button>
+    <button id="sampleBtn" class="btn btn-secondary">Load text</button>
+  </div>
+
+  <div class="output-area">
+    <h3>Cut-uo Text</h3>
+    <div id="output">The result is shown here after you pushed "Cut it up!"...</div>
+    <br>
+    <button id="copyBtn" class="btn btn-secondary">Copy the result</button>
+  </div>
+
+  <div class="footer-note">
+    GitHub Pages & Jekyll.
+  </div>
+</div>
+
+<script src="{{ '/assets/js/cutup.js' | relative_url }}"></script>
